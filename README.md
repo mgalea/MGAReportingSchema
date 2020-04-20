@@ -5,5 +5,9 @@ to regulate the reporting by land based operators. The directive can be dopwnloa
 
 This is the repo with the latest versions.
 
-**__Version 04202020__**
-Removed `<minOccur>` from **MonetaryAMount** element in commonTypes.
+**__Version 20200420__**
+
+* Removed `<minOccur>` from `MonetaryAmount` element in **commonTypes** Schema.
+* Added Pari Mutuel Reporting in **B2BType3SmryCompliance** Schema.
+
+
