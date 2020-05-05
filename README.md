@@ -8,6 +8,8 @@ This is the repo with the latest versions.
 ## Version 20200420
 ### CommonTypes
 * Removed `<minOccur>` from `MonetaryAmount` element in **commonTypes** Schema.
+* Changed **PlayerTypes1** to include only Land Based Player types
+* Added **PlayerTypes2** to include all types of Players
 
 ### B2BType3SmryCompliance
 * Updated Pool Types. Can be used to report Pari Mutuel and Bingo.
@@ -17,10 +19,11 @@ This is the repo with the latest versions.
 
 ### MGATypes
 * Changed  **Sports** type to **SportsTypes**
-* Changed **PlayerTypes1** to include only Land Based types
-* Added **PlayerTypes2** to include all types of Players
+
 * Corrected **BetTypes** to include missing elements
 * Changed **Type3PoolGamesSummary** to include new elements
+* changed **BettingMarkets** to **BettingVerticals**
+
 
 
 ## Version 20200312
