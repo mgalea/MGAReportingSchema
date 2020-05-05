@@ -6,10 +6,21 @@ to regulate the reporting by land based operators. The directive can be dopwnloa
 This is the repo with the latest versions.
 
 ## Version 20200420
-
+### CommonTypes
 * Removed `<minOccur>` from `MonetaryAmount` element in **commonTypes** Schema.
+
+### B2BType3SmryCompliance
 * Added Pari Mutuel Reporting in **B2BType3SmryCompliance** Schema.
+
+### SmryLiveTables
 * Removed `<TtlResult>` from **SmryLiveTables** Schema
+
+### MGATypes
+* Changed  **Sports** type to **SportsTypes**
+* Changed **PlayerTypes1** to include only Land Based types
+* Added **PlayerTypes2** to iunclude all types of Players
+* Corrected **BetTypes** to include missing elements
+* Chnaged **Type3PoolGamesSummary** to include new elements
 
 
 ## Version 20200312
