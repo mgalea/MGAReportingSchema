@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by mgalea (Ramdom Consulting LLC) -->
+<!-- edited with XMLSpy v2013 rel. 2 (x64) (http://www.altova.com) by mgalea (Ramdom Consulting LLC) -->
 <!-- Title: Common Data types for Gaming Standards -->
 <!-- Maintaining Agent: Random Consulting based on Gaming Standrads Association RRI -->
 <!-- Owner: Malta Gaming Authority based on Gaming Standrads Association RRI -->
@@ -524,6 +524,7 @@
 		<xs:restriction base="xs:decimal">
 			<xs:fractionDigits value="8"/>
 			<xs:totalDigits value="18"/>
+			<xs:minInclusive value="0"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NamePrefix1Code">
@@ -682,7 +683,7 @@
 					<xs:documentation>Player Unique Identification given by operator. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Tp" type="PlayerTypes1" default="Account Based" minOccurs="0">
+			<xs:element name="PlyrTp" type="PlayerTypes2" default="Account Based" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Player Type</xs:documentation>
 				</xs:annotation>
@@ -826,7 +827,16 @@
 	</xs:complexType>
 	<xs:simpleType name="PlayerTypes1">
 		<xs:annotation>
-			<xs:documentation>Type of Player</xs:documentation>
+			<xs:documentation>Type of Player for Land Based Gaming</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="Max16Text">
+			<xs:enumeration value="Junket"/>
+			<xs:enumeration value="Walk In"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PlayerTypes2">
+		<xs:annotation>
+			<xs:documentation>Type of Player for all Gaming</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="Max16Text">
 			<xs:enumeration value="Account Based"/>
