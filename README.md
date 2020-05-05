@@ -8,7 +8,7 @@ This is the repo with the latest versions.
 ## Version 20200420
 ### CommonTypes
 * Removed `<minOccur>` from `MonetaryAmount` element in **commonTypes** Schema.
-* Changed **PlayerTypes1** to include only Land Based types
+* Changed **PlayerTypes1** to include only Land Based Player types
 * Added **PlayerTypes2** to include all types of Players
 
 ### B2BType3SmryCompliance
