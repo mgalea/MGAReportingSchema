@@ -18,9 +18,9 @@ This is the repo with the latest versions.
 ### MGATypes
 * Changed  **Sports** type to **SportsTypes**
 * Changed **PlayerTypes1** to include only Land Based types
-* Added **PlayerTypes2** to iunclude all types of Players
+* Added **PlayerTypes2** to include all types of Players
 * Corrected **BetTypes** to include missing elements
-* Chnaged **Type3PoolGamesSummary** to include new elements
+* Changed **Type3PoolGamesSummary** to include new elements
 
 
 ## Version 20200312
