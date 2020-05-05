@@ -10,7 +10,7 @@ This is the repo with the latest versions.
 * Removed `<minOccur>` from `MonetaryAmount` element in **commonTypes** Schema.
 
 ### B2BType3SmryCompliance
-* Added Pari Mutuel Reporting in **B2BType3SmryCompliance** Schema.
+* Updated Pool Types. Can be used to report Pari Mutuel and Bingo.
 
 ### SmryLiveTables
 * Removed `<TtlResult>` from **SmryLiveTables** Schema
