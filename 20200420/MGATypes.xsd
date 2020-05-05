@@ -123,12 +123,12 @@
 			<xs:element name="BetTypes">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="TtlReal" type="mga:BettingMarkets">
+						<xs:element name="TtlReal" type="mga:BettingVerticals">
 							<xs:annotation>
 								<xs:documentation>Total Amount of bets opened based on real  events during the period. Based on open bets</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="TtlVirtual" type="mga:BettingMarkets">
+						<xs:element name="TtlVirtual" type="mga:BettingVerticals">
 							<xs:annotation>
 								<xs:documentation>Total Amount of bets opened based on virtual events during the period. Based on open Bets</xs:documentation>
 							</xs:annotation>
@@ -1023,6 +1023,9 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="SportsTypes">
+		<xs:annotation>
+			<xs:documentation>Major sports on whihc MGA  collects statistical data</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="AmericanFootball" type="rri:Max16Text"/>
 			<xs:element name="Basketball" type="rri:Max16Text"/>
@@ -1033,6 +1036,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PoolTypes">
+		<xs:annotation>
+			<xs:documentation>Types of Pool Betting</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Lottery" type="rri:Max16Text"/>
 			<xs:element name="Jackpot" type="rri:Max16Text"/>
@@ -1042,7 +1048,10 @@
 			<xs:element name="Other" type="rri:Max16Text"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="BettingMarkets">
+	<xs:complexType name="BettingVerticals">
+		<xs:annotation>
+			<xs:documentation>Type of Betting Markets</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Lotteries" type="rri:Max16Text"/>
 			<xs:element name="Sports" type="rri:Max16Text"/>
@@ -1053,5 +1062,15 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="BetType"/>
+	<xs:complexType name="BetType">
+		<xs:annotation>
+			<xs:documentation>Type of Bets</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Single" type="rri:Max16Text"/>
+			<xs:element name="Combo" type="rri:Max16Text"/>
+			<xs:element name="Multi" type="rri:Max16Text"/>
+			<xs:element name="Other" type="rri:Max16Text"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
