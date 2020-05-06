@@ -927,7 +927,11 @@
 			<xs:element name="PlGm" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="ID" type="rri:Max2048Text"/>
+						<xs:element name="PlGmId" type="rri:Max2048Text">
+							<xs:annotation>
+								<xs:documentation>A Unique identifier for Pool Game. If the game was a shaared pool then the Id must be the one issued by the Organising Operator.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
 						<xs:element name="ClsDt" type="rri:ISODate">
 							<xs:annotation>
 								<xs:documentation>Closing date of Pool Wityhin period</xs:documentation>
