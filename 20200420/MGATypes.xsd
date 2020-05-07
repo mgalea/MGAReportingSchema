@@ -406,7 +406,7 @@
 	<xs:complexType name="SummaryLiveGameCashflowByPlayerType">
 		<xs:sequence>
 			<xs:element name="Player" type="rri:PlayerTypes1"/>
-			<xs:element name="SmryCshFlTpLvTbl" type="mga:SummaryCashFlowByType1LiveTable"/>
+			<xs:element name="SmryCshFlTpLvTbl" type="mga:SummaryCashFlowByType1LiveTable" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="SummaryCashflowByOperator">
