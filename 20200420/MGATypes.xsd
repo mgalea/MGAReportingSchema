@@ -636,11 +636,6 @@
 					<xs:documentation>Total monetary Amount on Credits</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TtlResult" type="rri:MonetaryAmount">
-				<xs:annotation>
-					<xs:documentation>Total monetary amount on Result.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="SummaryCashFlowByType1Game">
