@@ -19,7 +19,7 @@ This is the repo with the latest versions.
 
 ### MGATypes
 * Changed  **Sports** type to **SportsTypes**
-
+* Changed maxoccur to unbounded in SummaryCashFlowByTableType1LiveTable
 * Corrected **BetTypes** to include missing elements
 * Changed **Type3PoolGamesSummary** to include new elements
 * changed **BettingMarkets** to **BettingVerticals**
