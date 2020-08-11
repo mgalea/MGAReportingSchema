@@ -7,6 +7,7 @@
 * Changed regex for **emailAddr**
 * changed regex for **URL**
 * changed regex for **ISOCurrency**
+* Added element **VrsnNb** to DocumentHeaderType1 complex type. The document version number must be the same one as the file name
 
 ###  MGATypes
 * Added `<currency>` and `<BaseRate>` attributes to  **PlyrWgrActvy**
