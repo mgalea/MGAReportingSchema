@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Title: Common Data types for Gaming Standards -->
+<!-- edited with XMLSpy v2020 rel. 2 sp1 (x64) (http://www.altova.com) by Mario Galea (Random Consulting) -->
+<!-- Title: Common Data types as defined by the Regulatory Reporting Interface (RRI) by Gaming Standards Association -->
 <!-- Maintaining Agent: Random Consulting based on Gaming Standrads Association RRI -->
 <!-- Owner: Malta Gaming Authority based on Gaming Standrads Association RRI -->
 <!-- Support: mario.galea@RNGgaming.com-->
@@ -37,7 +38,7 @@
 			<xs:documentation>Personal Contact Details</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PhneNb" type="PhoneNumber" minOccurs="0">
+			<xs:element name="PhnNb" type="PhoneNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Phone Number</xs:documentation>
 				</xs:annotation>
@@ -74,7 +75,7 @@
 					<xs:documentation>Full Name</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PhneNb" type="PhoneNumber" minOccurs="0">
+			<xs:element name="PhnNb" type="PhoneNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Telephone Number</xs:documentation>
 				</xs:annotation>
@@ -112,16 +113,6 @@
 			<xs:documentation>All Currencies</xs:documentation>
 		</xs:annotation>
 		<xs:union memberTypes="ISOCurrencyCode VirtualCurrencyCode"/>
-	</xs:simpleType>
-	<xs:simpleType name="DocumentCategoryType">
-		<xs:annotation>
-			<xs:documentation>Document Type</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="Max16Text">
-			<xs:enumeration value="Detailed"/>
-			<xs:enumeration value="Summary"/>
-			<xs:enumeration value="Other"/>
-		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="DocumentHeaderType1">
 		<xs:annotation>
@@ -175,6 +166,16 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="DocumentCategoryType">
+		<xs:annotation>
+			<xs:documentation>Document Type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="Max16Text">
+			<xs:enumeration value="Detailed"/>
+			<xs:enumeration value="Summary"/>
+			<xs:enumeration value="Other"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="DocumentPeriodType">
 		<xs:annotation>
 			<xs:documentation>Document Reporting Period</xs:documentation>
@@ -201,7 +202,7 @@
 			<xs:documentation>Email Address according to the RFC 882</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="Max255Text">
-			<xs:pattern value="[^\.][^@]*@([^\.|^@])+\.[^@]+"/>
+			<xs:pattern value="[!#$%&amp;&apos;*+/0-9=?A-Z_`a-z{|}~^-]+(\.[!#$%&amp;&apos;*+/0-9=?A-Z_`a-z{|}~^-]+)*@([0-9A-Za-z-]+\.)+[A-Za-z]{2,63}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="FundingTypes">
@@ -303,14 +304,16 @@
 		<xs:annotation>
 			<xs:documentation>ISO 8601 Basic and Extended Notations as YYYY-MM-DD</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:date"/>
+		<xs:restriction base="xs:date">
+			<xs:pattern value="(20[1-9][0-9])-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ISODateTime">
 		<xs:annotation>
 			<xs:documentation>ISO 8601 Basic and Extended Notations as YYYY-MM-DDTHH:MM:SS in UTC format</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:dateTime">
-			<xs:pattern value="(-?([1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.[0-9]+)?(Z)?"/>
+			<xs:pattern value="(20[1-9][0-9])-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\.[0-9]{1,7})?(Z[-]?(([1-2][0-2])|[0-9]))?"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ISODuration">
@@ -517,6 +520,15 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MonetaryAmount">
+		<xs:annotation>
+			<xs:documentation>Format for representing monetary values. Should be used only in conjuction of with a Currency element or attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="8"/>
+			<xs:totalDigits value="18"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MonetaryAmountPositive">
 		<xs:annotation>
 			<xs:documentation>Format for representing monetary values. Should be used only in conjuction of with a Currency element or attribute.</xs:documentation>
 		</xs:annotation>
@@ -734,10 +746,15 @@
 			<xs:documentation>Player Identification Information</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PlyrId" type="Max2048Text">
+			<xs:element name="PlyrId">
 				<xs:annotation>
 					<xs:documentation>Player Unique Id as referred to in the Player Managment System.</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="Max2048Text">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 			<xs:element name="PlyrTp" type="PlayerTypes1" minOccurs="0">
 				<xs:annotation>
@@ -874,7 +891,7 @@
 					<xs:documentation>Building, Office or Suite Number </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AdrLine" type="Max70Text" maxOccurs="7">
+			<xs:element name="addrLn" type="addressLineType" minOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Address Lines</xs:documentation>
 				</xs:annotation>
@@ -912,7 +929,7 @@
 			<xs:documentation>Uniform Resource Locator as defined by IETF and W3C. The format is "scheme:[//authority]path[?query][#fragment]"</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="Max255Text">
-			<xs:pattern value="[A-Za-z]+://([0-9A-Za-z-]+\.)+[A-Za-z]{2,63}/?"/>
+			<xs:pattern value="(https?://)?([a-zA-Z0-9-_~%]+\.)+[A-Za-z]{2,7}(/[a-zA-Z0-9-_~%]+)*"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="VirtualCurrencyCode">
@@ -936,4 +953,16 @@
 			<xs:enumeration value="Other"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="addressLineType">
+		<xs:sequence>
+			<xs:element name="addressLine" type="Max70Text" minOccurs="1"/>
+			<xs:element name="nextaddrLn" type="addressLineType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fullnameType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1"/>
+			<xs:element name="addrLn" type="addressLineType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2019 (http://www.altova.com) by Jason Farrugia (Malta Gaming Authority) -->
+<!-- edited with XMLSpy v2013 rel. 2 (x64) (http://www.altova.com) by mgalea (Ramdom Consulting LLC) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mga="MGA" targetNamespace="MGA" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="MGATypes.xsd"/>
 	<xs:element name="B2CPlyrAcctsDetail" type="mga:PlayerDataDetailedReport" id="Root">
@@ -20,7 +20,7 @@
 					</xs:annotation>
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="Player" type="mga:PlayerAccountDetailType1"/>
+							<xs:element name="Player" type="mga:PlayerAccountDetailType1" maxOccurs="unbounded"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
