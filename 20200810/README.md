@@ -4,5 +4,9 @@
 * Removed extra '^' from `pattern` in simple type element **ISODateTime** 
 * Changed **PlayerTypes1** to include only Land Based Player types
 * Added **MonetaryAmountPositive** to include only positive Monetary amounts
+* Changed regex for **emailAddr**
+* changed regex for **URL**
+* changed regex for **ISOCurrency**
+
 ###  MGATypes
 * Added `<currency>` and `<BaseRate>` attributes to  **PlyrWgrActvy**
