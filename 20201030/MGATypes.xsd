@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2020 rel. 2 sp1 (x64) (http://www.altova.com) by Mario Galea (Random Consulting) -->
+<!-- edited with XMLSpy v2021 (x64) (http://www.altova.com) by Mario Galea (Random Consulting Ltd) -->
 <!-- Title: MGA Common Data types as defined by the Directive 6 of the Malta Gaming Act  -->
 <!-- Maintaining Agent: Random Consulting based on Gaming Standrads Association RRI -->
 <!-- Owner: Malta Gaming Authority based on Gaming Standrads Association RRI -->
@@ -334,7 +334,7 @@
 			<xs:documentation>Player Account Information</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="AccActvyByCcy" type="mga:PlayerAcctActivity1" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="AccActvyByCcy" type="mga:PlayerActivitySummary" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PlayerAccountDetailType1">
@@ -584,9 +584,21 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="SummaryLiveGameCashflowByPlayerType">
+		<xs:annotation>
+			<xs:documentation>Summary Game Cash FLow by Player Type for land based Gaming  Live Tables</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Player" type="rri:PlayerTypes1"/>
 			<xs:element name="SmryCshFlTpLvTbl" type="mga:SummaryCashFlowByType1LiveTable" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SummaryGameCashflowByPlayerType">
+		<xs:annotation>
+			<xs:documentation>Summary Game Cash FLow by Player Type. For land based Gaming this does not include Live Tables</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Player" type="rri:PlayerTypes1"/>
+			<xs:element name="PlyrActvySmry" type="mga:AccountActivitySummary"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="SummaryType1ActivitybyOperator">
