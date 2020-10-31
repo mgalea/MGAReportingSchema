@@ -25,6 +25,11 @@
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="PlyrActvySmrybyPlyrTp" type="mga:SummaryLiveGameCashflowByPlayerType"/>
+						<xs:element name="B2CJckPtsSmry" type="mga:JackpotsSummary" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Jacpots organized by the B2C operator</xs:documentation>
+							</xs:annotation>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CCY" type="rri:ISOCurrencyCode" default="EUR"/>
 					<xs:attribute name="BaseRate" type="xs:decimal" default="1.0">
@@ -33,11 +38,6 @@
 						</xs:annotation>
 					</xs:attribute>
 				</xs:complexType>
-			</xs:element>
-			<xs:element name="B2CJckPtsSmry" type="mga:JackpotsSummary" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Jacpots organized by the B2C operator</xs:documentation>
-				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
