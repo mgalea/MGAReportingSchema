@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2020 rel. 2 sp1 (x64) (http://www.altova.com) by Mario Galea (Random Consulting) -->
+<!-- edited with XMLSpy v2021 (x64) (http://www.altova.com) by Mario Galea (Random Consulting Ltd) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rri="RRI" xmlns:mga="MGA" targetNamespace="MGA" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="MGATypes.xsd"/>
 	<xs:import namespace="RRI" schemaLocation="commonTypes.xsd"/>
@@ -13,7 +13,7 @@
 			<xs:documentation>B2B Type Summary Report</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Header" type="rri:DocumentHeaderType1">
+			<xs:element name="Header" type="mga:DocumentHeaderType1">
 				<xs:annotation>
 					<xs:documentation>Document Metadata. in this case Tp of Document must be report. period type must be periodic. category must be summary.</xs:documentation>
 				</xs:annotation>
@@ -24,7 +24,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="SmryGmActvtybyOpr" type="mga:SummaryType2ActivitybyOperator"/>
+						<xs:element name="SmryGmActvtybyOpr" type="mga:SummaryType2ActivitybyOperator" maxOccurs="unbounded"/>
 					</xs:sequence>
 					<xs:attribute name="CCY" type="rri:CurrencyCode"/>
 					<xs:attribute name="BaseRate" type="xs:decimal">
