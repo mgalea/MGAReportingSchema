@@ -24,7 +24,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="SmryCashFlowbyPlayerType" type="mga:SummaryLiveGameCashflowByPlayerType" maxOccurs="2"/>
+						<xs:element name="SmryCshFlwbyPlyrTp" type="mga:SummaryLiveGameCashflowByPlayerType" maxOccurs="2"/>
 						<xs:element name="B2CJckPtsSmry" type="mga:JackpotsSummary" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>Jacpots organized by the B2C operator</xs:documentation>

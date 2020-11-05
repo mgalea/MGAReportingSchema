@@ -589,7 +589,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Player" type="rri:PlayerTypes1"/>
-			<xs:element name="PlayerActivitySummary" type="mga:PlayerActivitySummary"/>
+			<xs:element name="LvTblSmryActvy" type="mga:SummaryCashFlowByType1LiveTable"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="SummaryGameCashflowByPlayerType">
