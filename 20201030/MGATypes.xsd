@@ -587,8 +587,8 @@
 			<xs:documentation>Summary Game Cash FLow by Player Type for land based Gaming  Live Tables</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Player" type="rri:PlayerTypes1"/>
-			<xs:element name="LvTblSmryActvy" type="mga:SummaryCashFlowByType1LiveTable"/>
+			<xs:element name="PlyrTp" type="rri:PlayerTypes1"/>
+			<xs:element name="LvTblSmryActvy" type="mga:SummaryCashFlowByType1LiveTable" maxOccurs="25"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="SummaryGameCashflowByPlayerType">
