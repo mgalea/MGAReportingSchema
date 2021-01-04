@@ -4,6 +4,8 @@ In 2019 the Malta Gaming Authority published **Directive 6 - Enhanced Automated 
 to regulate the reporting by land based operators. The directive can be dopwnloaded from here(https://www.mga.org.mt/legislations-regulations/#gamingindustrydirectives)
 
 This is the repo with the latest versions.
+## Latest Version:  20201231
+
 
 ## Version 20200420
 ### CommonTypes
