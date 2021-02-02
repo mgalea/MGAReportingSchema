@@ -271,7 +271,7 @@
 					<xs:documentation>Reporting to Country</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RprtOprtr" type="rri:Max35Text">
+			<xs:element name="RprtOprtr" type="rri:Max4Text">
 				<xs:annotation>
 					<xs:documentation>Gaming Licence ID of Rapporteur</xs:documentation>
 				</xs:annotation>
