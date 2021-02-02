@@ -4,7 +4,13 @@ In 2019 the Malta Gaming Authority published **Directive 6 - Enhanced Automated 
 to regulate the reporting by land based operators. The directive can be dopwnloaded from here(https://www.mga.org.mt/legislations-regulations/#gamingindustrydirectives)
 
 This is the repo with the latest versions.
-## Latest Version:  20201231
+## Latest Version:  20210201
+
+
+## Version 20210201
+
+###  MGATypes
+* Changed  regex for **OperatorMTLicence"** to MGA/XXX/NNNN/YYYY (X=any word-char, N=numeric, YYYY = year)
 
 
 ## Version 20200420
@@ -25,7 +31,6 @@ This is the repo with the latest versions.
 * Corrected **BetTypes** to include missing elements
 * Changed **Type3PoolGamesSummary** to include new elements
 * changed **BettingMarkets** to **BettingVerticals**
-
 
 
 ## Version 20200312
